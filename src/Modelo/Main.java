@@ -57,6 +57,7 @@ public class Main {
         //for (Inscripcion aux : id.buscarInscripciones(1)) {//Funciona
             //System.out.println(aux);
         //}
+        //Probando...
         
         
     }
