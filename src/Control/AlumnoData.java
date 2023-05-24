@@ -57,7 +57,7 @@ public class AlumnoData {
         
     }
     
-    public void actualizarAlumno(Alumno alumno) {
+    public void actualizarAlumno(Alumno alumno) {//Funciona
         
         String sql = "UPDATE alumno SET dni=?, apellido=?, nombre=?, fecha_nacimiento=?, estado=? WHERE id_Alumno=?";
         
@@ -109,6 +109,7 @@ public class AlumnoData {
             else {
                 System.out.println("Alumno no encontrado.");
             }
+            ps.close();
             
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla alumno " + ex.getMessage());
@@ -142,6 +143,7 @@ public class AlumnoData {
             else {
                 System.out.println("Alumno no encontrado.");
             }
+            ps.close();
             
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla alumno " + ex.getMessage());
@@ -150,7 +152,7 @@ public class AlumnoData {
         
     }
     
-    public ArrayList<Alumno> buscarAlumnos(int estado) {
+    public ArrayList<Alumno> buscarAlumnos(int estado) {//Funciona
         
         Alumno alumno = null;
         ArrayList<Alumno> alumnos = new ArrayList<>();
@@ -179,6 +181,7 @@ public class AlumnoData {
             if (alumnos.isEmpty()) {
                 System.out.println("No encontro ningun alumno.");
             }
+            ps.close();
             
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla alumno " + ex.getMessage());
@@ -188,7 +191,7 @@ public class AlumnoData {
     }
     
     //El metodo desacticar, solo modifica "estado".
-    public void desactivar(int id_Alumno) {
+    public void desactivar(int id_Alumno) {//Funciona
         
         String sql = "UPDATE alumno SET estado=0 WHERE id_Alumno=?";
         

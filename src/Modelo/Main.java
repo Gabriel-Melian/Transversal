@@ -52,13 +52,17 @@ public class Main {
         InscripcionData id = new InscripcionData();
         
         //id.inscribirAlumno(inscripcion);//Funciona
-        //id.actualizar(7, 15);//Funciona
+        //id.actualizar(8, 15);//Funciona
         //id.eliminar(12);//Funciona
         //for (Inscripcion aux : id.buscarInscripciones(1)) {//Funciona
             //System.out.println(aux);
         //}
-        //Probando...
-        
+        //for (Inscripcion aux : id.obtenerInscripciones()) {//Funciona
+            //System.out.println(aux);
+        //}
+        //for (Materia aux : id.materiasCursadas(1)) {//Funciona
+            //System.out.println(aux);
+        //}
         
     }
     

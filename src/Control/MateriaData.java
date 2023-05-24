@@ -104,6 +104,7 @@ public class MateriaData {
             else {
                 JOptionPane.showMessageDialog(null, "Materia no encontrada.");
             }
+            ps.close();
             
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla materia " + ex.getMessage());
@@ -139,6 +140,7 @@ public class MateriaData {
             if (materias.isEmpty()) {
                 System.out.println("No se encontro ninguna materia.");
             }
+            ps.close();
             
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla materia " + ex.getMessage());
