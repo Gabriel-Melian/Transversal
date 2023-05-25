@@ -63,6 +63,12 @@ public class Main {
         //for (Materia aux : id.materiasCursadas(1)) {//Funciona
             //System.out.println(aux);
         //}
+        //for (Materia aux : id.materiasNoCursadas(1)) {//Funciona
+            //System.out.println(aux);
+        //}
+        //for (Alumno aux : id.AlumnosXMateria(2)) {//Funciona
+            //System.out.println(aux);
+        //}
         
     }
     
