@@ -138,7 +138,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jInscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jInscripcionActionPerformed
         
-        jEscritorio.removeAll();
+        jEscritorio.removeAll();//
         jEscritorio.repaint();
         ViewInscripcion viewIns = new ViewInscripcion();
         jEscritorio.add(viewIns);
