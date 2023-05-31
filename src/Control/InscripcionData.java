@@ -78,15 +78,16 @@ public class InscripcionData {
         
     }
     
-    public void eliminar(int id_Inscripto) {//Funciona
+    public void eliminar(int id_Alumno, int id_Materia) {//Funciona
         
-        String sql = "DELETE FROM inscripcion WHERE id_Inscripto=?";
+        String sql = "DELETE FROM inscripcion WHERE id_Alumno=? AND id_Materia=?";
         
         PreparedStatement ps;
         
         try {
             ps = con.prepareStatement(sql);
-            ps.setInt(1, id_Inscripto);
+            ps.setInt(1, id_Alumno);
+            ps.setInt(2, id_Materia);
             
             if (ps.executeUpdate() == 1) {
                 JOptionPane.showMessageDialog(null, "Inscripcion eliminada correctamente.");
