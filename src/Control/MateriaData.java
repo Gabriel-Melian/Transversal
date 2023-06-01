@@ -43,10 +43,10 @@ public class MateriaData {
             
             if(rs.next()) {
                 materia.setId_Materia(rs.getInt(1));
-                System.out.println("Materia creada exitosamente.");
+                JOptionPane.showMessageDialog(null, "Materia creada exitosamente.");
             }
             else {
-                System.out.println("La materia no se pudo guardar.");
+                JOptionPane.showMessageDialog(null, "No se pudo crear la materia.");
             }
             ps.close();
             
@@ -102,7 +102,7 @@ public class MateriaData {
                 materia.setEstado(rs.getInt("estado"));
             }
             else {
-                JOptionPane.showMessageDialog(null, "Materia no encontrada.");
+                JOptionPane.showMessageDialog(null, "La materia no existe.");
             }
             ps.close();
             
@@ -169,6 +169,27 @@ public class MateriaData {
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla materia " + ex.getMessage());
         }
         
+    }
+    
+    public void borrar(int id_Materia) {
+        
+        String sql = "DELETE FROM materia WHERE id_Materia=?";
+        
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id_Materia);
+            
+            if (ps.executeUpdate() == 1) {
+                JOptionPane.showMessageDialog(null, "Materia eliminada correctamente.");
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Materia no encontrada.");
+            }
+            ps.close();
+            
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla materia " + ex.getMessage());
+        }
     }
     
     
