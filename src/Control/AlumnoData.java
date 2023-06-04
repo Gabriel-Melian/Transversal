@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Control;
 import Modelo.Alumno;
 import java.sql.Connection;
@@ -12,13 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Gabriel
+ * @author Grupo 7
  */
 public class AlumnoData {
     
@@ -45,8 +37,10 @@ public class AlumnoData {
             
             if(rs.next()) {
                 alumno.setId_Alumno(rs.getInt(1));
+                JOptionPane.showMessageDialog(null,"El Alumnno se guardo correctamente");
             }
             else {
+                JOptionPane.showMessageDialog(null,"El Alumnno no se guardo correctamente");
                 System.out.println("El Alumno no se pudo guardar.");
             }
             ps.close();
@@ -107,6 +101,7 @@ public class AlumnoData {
                 alumno.setEstado(rs.getInt("estado"));
             }
             else {
+                JOptionPane.showMessageDialog(null, " Alumno no Encontrado ");
                 System.out.println("Alumno no encontrado.");
             }
             ps.close();
@@ -141,6 +136,7 @@ public class AlumnoData {
                 alumno.setEstado(rs.getInt("estado"));
             }
             else {
+                JOptionPane.showMessageDialog(null, " Alumno no Encontrado ");
                 System.out.println("Alumno no encontrado.");
             }
             ps.close();
@@ -190,7 +186,7 @@ public class AlumnoData {
         
     }
     
-    //El metodo desacticar, solo modifica "estado".
+    //El metodo desactivar, solo modifica "estado".
     public void desactivar(int id_Alumno) {//Funciona
         
         String sql = "UPDATE alumno SET estado=0 WHERE id_Alumno=?";

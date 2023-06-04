@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Vistas;
 
 import Modelo.*;
@@ -10,14 +5,11 @@ import Control.*;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Gabriel
+ 
+ * @author Grupo 7
  */
 public class ViewMaterias extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form ViewMaterias
-     */
     public ViewMaterias() {
         initComponents();
     }
@@ -244,7 +236,7 @@ public class ViewMaterias extends javax.swing.JInternalFrame {
         MateriaData md = new MateriaData();
 
         md.desactivar(idMateria);
-
+        cBEstado.setSelected(false);
     }//GEN-LAST:event_bTNDesahabilitarActionPerformed
 
     private void bTNBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bTNBuscarActionPerformed

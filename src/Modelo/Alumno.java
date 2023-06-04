@@ -25,7 +25,7 @@ public class Alumno {
         this.fecha_nacimiento = fecha_nacimiento;
         this.estado = estado;
     }
-
+    
     public Alumno(int id_Alumno, int dni, String apellido, String nombre, LocalDate fecha_nacimiento, int estado) {
         this.id_Alumno = id_Alumno;
         this.dni = dni;
