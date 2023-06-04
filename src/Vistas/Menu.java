@@ -1,11 +1,17 @@
 package Vistas;
 
+import com.jtattoo.plaf.noire.NoireLookAndFeel;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.plaf.metal.MetalLookAndFeel;
+
 /*
  * @author Grupo 7
  */
 public class Menu extends javax.swing.JFrame {
 
-    
     public Menu() {
         initComponents();
         setLocationRelativeTo(null);
@@ -17,6 +23,14 @@ public class Menu extends javax.swing.JFrame {
 
         jMenuItem1 = new javax.swing.JMenuItem();
         jEscritorio = new javax.swing.JDesktopPane();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMaterias = new javax.swing.JMenuItem();
@@ -34,15 +48,81 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jEscritorio.setBackground(new java.awt.Color(45, 53, 59));
+
+        jLabel1.setText("Trabajo Practico Proyecto Transversal: Universidad.");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/UNIVERSIDAD_EDIT-removebg-preview.png"))); // NOI18N
+
+        jLabel3.setText("Grupo 7");
+
+        jLabel4.setText("Integrantes:");
+
+        jLabel5.setText("Melian, Gabriel.");
+
+        jLabel6.setText("Moll Montiveros,Jesica.");
+
+        jLabel7.setText("Mercau Yañez, Lucas.");
+
+        jLabel8.setText("Mansilla, Dario Gustavo.");
+
+        jEscritorio.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jEscritorio.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jEscritorio.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jEscritorio.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jEscritorio.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jEscritorio.setLayer(jLabel6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jEscritorio.setLayer(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jEscritorio.setLayer(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout jEscritorioLayout = new javax.swing.GroupLayout(jEscritorio);
         jEscritorio.setLayout(jEscritorioLayout);
         jEscritorioLayout.setHorizontalGroup(
             jEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 606, Short.MAX_VALUE)
+            .addGroup(jEscritorioLayout.createSequentialGroup()
+                .addGroup(jEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jEscritorioLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addGroup(jEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)))
+                    .addGroup(jEscritorioLayout.createSequentialGroup()
+                        .addGap(191, 191, 191)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(120, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jEscritorioLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jEscritorioLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(147, 147, 147))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jEscritorioLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(280, 280, 280))))
         );
         jEscritorioLayout.setVerticalGroup(
             jEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 543, Short.MAX_VALUE)
+            .addGroup(jEscritorioLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(jLabel1)
+                .addGap(41, 41, 41)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         jMenu1.setText("Materias");
@@ -128,7 +208,8 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    
     private void jInscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jInscripcionActionPerformed
         
         jEscritorio.removeAll();
@@ -207,10 +288,16 @@ public class Menu extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                try {
+                    UIManager.setLookAndFeel(new NoireLookAndFeel());
+                } catch (UnsupportedLookAndFeelException ex) {
+                    Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+                }
                 new Menu().setVisible(true);
             }
         });
@@ -221,6 +308,14 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jCargarNotas;
     private javax.swing.JDesktopPane jEscritorio;
     private javax.swing.JMenuItem jInscripcion;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JMenuItem jListarAlumnosXMat;
     private javax.swing.JMenuItem jMaterias;
     private javax.swing.JMenu jMenu1;
@@ -232,4 +327,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenu jSalir;
     // End of variables declaration//GEN-END:variables
+
+    
 }
